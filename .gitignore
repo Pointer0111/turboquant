@@ -9,5 +9,6 @@ build/
 .venv/
 .env
 *.log
+*claude*
 /tmp/
 test-output/
