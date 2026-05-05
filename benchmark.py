@@ -9,17 +9,17 @@ Usage:
 import os, sys, subprocess, json, time
 
 PYTHON = sys.executable
-GPUS = os.environ.get("CUDA_VISIBLE_DEVICES", "0,1,4,6")
+GPUS = os.environ.get("CUDA_VISIBLE_DEVICES", "0")
 
 MODELS = {
     "Qwen2.5-7B-Instruct": {
-        "path": "/mnt/llm_models/Qwen2.5-7B-Instruct",
-        "tp": 2, "gpu_mem": 0.90, "max_model_len": 32768,
+        "path": "/root/autodl-fs/Qwen2.5-7B-Instruct",
+        "tp": 1, "gpu_mem": 0.90, "max_model_len": 32768,
         "block_size": 16, "dtype": "bfloat16",
     },
     "Qwen3.5-27B": {
-        "path": "/mnt/llm_models/Qwen3.5-27B",
-        "tp": 4, "gpu_mem": 0.90, "max_model_len": 131072,
+        "path": "/root/autodl-fs/Qwen3.5-27B",
+        "tp": 1, "gpu_mem": 0.90, "max_model_len": 131072,
         "block_size": 784, "dtype": "bfloat16",
     },
 }
